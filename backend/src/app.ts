@@ -1140,6 +1140,7 @@ app.post(
   mutationLimiter,
   enforceBodyLimit(DEFAULT_BODY_LIMIT),
   requireJsonContentType,
+  idempotencyMiddleware,
   maintainerLimiter,
   createBountyCreationSignatureMiddleware(),
   (req: Request, res: Response, next: NextFunction) => {
